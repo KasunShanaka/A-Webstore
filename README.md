@@ -1,5 +1,4 @@
-# Project Name
-Athal.lk
+# Project Name : Athal.lk
 
 TODO: 
 
