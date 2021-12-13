@@ -17,8 +17,8 @@
             .logo {
                 position: absolute;
                 left: 50%;
-                color: rgb(255, 119, 0);
-                font-size: 2rem;
+                color: $AccentColor1;
+                font-size: 2.5rem;
                 transform: translate(-50%);
             }
             .accInfo {
@@ -26,15 +26,21 @@
             }
         }
 
+        .gap {
+            margin: 20px 0;
+        }
+
         .navBody {
+            padding: 7px 0;
+            border-top: 0.5px solid $borderColor;
+            border-bottom: 0.5px solid $borderColor;
             display: flex;
             flex-direction: row;
             justify-content: center;
             gap: 6vw;
+            margin-bottom: 0;
         }
 
-        .gap {
-            margin: 20px 0;
-        }
+        
     }
 }
