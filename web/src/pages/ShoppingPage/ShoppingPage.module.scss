@@ -1,22 +1,187 @@
+@import "../../styles/variables";
+
 .container {
-    
-    .body {
-        display: grid;
-        grid-template-columns: 20vw auto;
+    height: 100vh;
+    overflow: hidden;
+    // background-color: rgb(255, 0, 0);
+    color: $PrimaryFontColor;
+    font-family: $PrimaryFont;
 
-        .contents {
-            .contentHeader {
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                text-align: center;
-                padding-right: 19vw;
+    .scrollArea {
+        overflow: auto;
+        height: 85vh;
+
+        .contentHeader {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .filterSection {
+            text-align: right;
+
+            .selectBox {
+                margin-bottom: 20px;
             }
+        }
 
-            .filterSection {
-                text-align: right;
-                
-                .selectBox {
-                    // width: 200px;
+        .body {
+            display: grid;
+            grid-template-columns: 20vw auto;
+
+            .contents {
+                // max-width: 1200px;
+
+                .productsSection {
+                    padding-bottom: 30px;
+                    display: grid;
+                    background-color: #ffd5d5;
+
+                    .products {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 20px;
+                        margin: 10px;
+
+                        .product {
+                            display: inline-block;
+                            background-color: rgb(219, 114, 114);
+                            // height: 100%;
+                            width: 150px;
+
+                            .productImg {
+                                img {
+                                    object-fit: cover;
+                                    height: 150px;
+                                    width: 100%;
+                                }
+                            }
+                            .pName {
+                                // width: 100%;
+                                font-size: 1rem;
+                                // white-space: nowrap;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            .pCategory {
+                                color: $SecondaryFontColor;
+                            }
+                            .pPrice {
+                            }
+                        }
+                    }
+                }
+
+                @media only screen and (min-width: 1210px) {
+                    .productsSection {
+                        display: grid;
+                        background-color: #ffd5d5;
+
+                        .products {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            gap: 30px;
+                            margin: 10px;
+
+                            .product {
+                                display: inline-block;
+                                background-color: rgb(219, 114, 114);
+                                // height: 200px;
+                                width: 100%;
+
+                                .productImg {
+                                    img {
+                                        object-fit: cover;
+                                        height: 150px;
+                                        width: 100%;
+                                    }
+                                }
+                                .pName {
+                                    font-size: 1.2rem;
+                                }
+                                .pCategory {
+                                }
+                                .pPrice {
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @media only screen and (max-width: 769px) {
+                    .productsSection {
+                        display: grid;
+                        background-color: #ffd5d5;
+
+                        .products {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 10px;
+                            margin: 10px;
+
+                            .product {
+                                display: inline-block;
+                                background-color: rgb(219, 114, 114);
+                                // height: 200px;
+                                width: 100%;
+                                color: $PrimaryFontColor;
+
+                                .productImg {
+                                    img {
+                                        object-fit: cover;
+                                        height: 150px;
+                                        width: 100%;
+                                    }
+                                }
+                                .pName {
+                                    font-size: 1rem;
+                                    font-weight: bold;
+                                }
+                                .pCategory {
+                                }
+                                .pPrice {
+                                }
+                            }
+                        }
+                    }
+                }
+                @media only screen and (max-width: 600px) {
+                    .productsSection {
+                        display: grid;
+                        background-color: #ffd5d5;
+
+                        .products {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            gap: 10px;
+                            margin: 10px;
+
+                            .product {
+                                display: inline-block;
+                                background-color: rgb(219, 114, 114);
+                                // height: 200px;
+                                width: 100%;
+
+                                .productImg {
+                                    img {
+                                        object-fit: cover;
+                                        height: 150px;
+                                        width: 100%;
+                                    }
+                                }
+                                .pName {
+                                    font-size: 1.2rem;
+                                }
+                                .pCategory {
+                                }
+                                .pPrice {
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
