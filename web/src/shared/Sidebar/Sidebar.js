@@ -10,37 +10,60 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 
 const Sidebar = () => {
 
-    const [open, setOpen] = React.useState(true);
+    const [openPriceFilter, setOpenPriceFilter] = React.useState(false);
+    const [openCategoryFilter, setOpenCategoryFilter] = React.useState(false);
 
-    const handleClick = () => {
-        setOpen(!open);
+    const handleCategoryFilter = () => {
+        setOpenCategoryFilter(!openCategoryFilter);
+    };
+
+    const handlePriceFilter = () => {
+        setOpenPriceFilter(!openPriceFilter);
     };
 
 
     return (
         <div className={style.container}>
-            <ListItemButton onClick={handleClick}>
-                Inbox
-                {open ? <ExpandLess /> : <ExpandMore />}
-            </ListItemButton>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItemButton >
-                        Inside
+            <div className={style.filterByTxt}>
+                Filter By :
+            </div>
+            <div className={style.collapseMenu}>
+                <div className={style.menuItemWrapper}>
+                    <ListItemButton className={style.menuItem} onClick={handlePriceFilter}>
+                        <div className={style.menuItemTitle} >
+                            Price
+                        </div>
+                        <div className={style.rightArrowIcon}>
+                            {openPriceFilter ? <ExpandLess /> : <ExpandMore />}
+                        </div>
                     </ListItemButton>
-                </List>
-            </Collapse>
-            <ListItemButton onClick={handleClick}>
-                Inbox
-                {open ? <ExpandLess /> : <ExpandMore />}
-            </ListItemButton>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItemButton >
-                        Inside
+                    <Collapse className={style.menuItemContents} in={openPriceFilter} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItemButton className={style.menuItemContentsTxt} >
+                                Price Filter
+                            </ListItemButton>
+                        </List>
+                    </Collapse>
+                </div>
+                <div className={style.menuItemWrapper}>
+                    <ListItemButton className={style.menuItem} onClick={handleCategoryFilter}>
+                        <div className={style.menuItemTitle} >
+                            Categories
+                        </div>
+                        <div className={style.rightArrowIcon}>
+                            {openCategoryFilter ? <ExpandLess /> : <ExpandMore />}
+                        </div>
                     </ListItemButton>
-                </List>
-            </Collapse>
+                    <Collapse className={style.menuItemContents} in={openCategoryFilter} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItemButton className={style.menuItemContentsTxt} >
+                                Price Filter
+                            </ListItemButton>
+                        </List>
+                    </Collapse>
+                </div>
+            </div>
+
         </div>
     )
 }

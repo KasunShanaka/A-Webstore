@@ -1,11 +1,11 @@
 @import "../../styles/variables";
 
 .container {
-    height: 100vh;
+    height:calc( 100vh - 16px);
     overflow: hidden;
     color: $PrimaryFontColor;
     font-family: $PrimaryFont;
-
+    
     .scrollArea {
         // overflow: auto;
         height: calc(100vh - 125px);
@@ -30,7 +30,7 @@
 
         .body {
             display: grid;
-            grid-template-columns: 20vw auto;
+            grid-template-columns: auto auto;
 
             .contents {
                 // max-width: 1200px;

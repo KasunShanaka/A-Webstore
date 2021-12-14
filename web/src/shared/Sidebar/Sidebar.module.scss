@@ -1,5 +1,39 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .container {
-    // background-color: lightblue;
+    overflow: auto;
+    max-width: 200px;
+    min-width: 150px;
+    width: 10vw;
+
+    .filterByTxt {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+    .collapseMenu {
+        .menuItemWrapper {
+            width: 100%;
+
+            .menuItem {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+
+                .menuItemTitle {
+                    font-size: 0.9rem;
+                }
+                .rightArrowIcon {
+                    font-size: 0.9rem;
+                }
+            }
+            .menuItemContents {
+                padding-left: 20px;
+
+                .menuItemContentsTxt {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
 }
