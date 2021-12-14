@@ -7,7 +7,7 @@
     font-family: $PrimaryFont;
 
     .scrollArea {
-        overflow: auto;
+        // overflow: auto;
         height: calc(100vh - 125px);
 
         .page {

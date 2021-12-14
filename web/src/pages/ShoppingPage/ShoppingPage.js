@@ -4,16 +4,21 @@ import style from './ShoppingPage.module.scss';
 import { useState } from 'react';
 import classnames from 'classnames';
 
-//components
+//shared components
 import Body from '../../shared/Body/Body';
 import Sidebar from '../../shared/Sidebar/Sidebar';
 import Navbar from '../../shared/Navbar/Navbar';
+
+//Material UI components
+// import NativeSelect from '@mui/material/NativeSelect';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-// import NativeSelect from '@mui/material/NativeSelect';
 import Pagination from '@mui/material/Pagination';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
 //icons
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -30,14 +35,30 @@ const ShoppingPage = () => {
     };
 
     return (
-        <Body>
-            <div className={style.container}>
-                <div className={style.navBar}>
-                    <Navbar />
+
+        <div className={style.container}>
+            <div className={style.navBar}>
+                <Navbar />
+            </div>
+            <Body>
+                <div className={style.leftSpace}>
+
                 </div>
                 <div className={style.scrollArea}>
                     <div className={style.page}>
-                        Home / All Toys
+                        <Breadcrumbs aria-label="breadcrumb">
+                            <Link underline="hover" color="inherit" href="/">
+                                MUI
+                            </Link>
+                            <Link
+                                underline="hover"
+                                color="inherit"
+                                href="/getting-started/installation/"
+                            >
+                                Core
+                            </Link>
+                            <Typography color="text.primary">Breadcrumbs</Typography>
+                        </Breadcrumbs>
                     </div>
                     <div className={classnames(style.contentHeader, style.gap)}>
                         All Toys
@@ -264,8 +285,8 @@ const ShoppingPage = () => {
                                     <InstagramIcon></InstagramIcon>
                                 </span>
                                 <span className={style.facebook}>
-                                   <FacebookIcon
-                                   ></FacebookIcon>
+                                    <FacebookIcon
+                                    ></FacebookIcon>
                                 </span>
                                 <span className={style.twitter}>
                                     <TwitterIcon></TwitterIcon>
@@ -277,8 +298,12 @@ const ShoppingPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </Body>
+                <div className={style.rightSpace}>
+
+                </div>
+            </Body>
+        </div>
+
     )
 }
 
