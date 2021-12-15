@@ -63,7 +63,6 @@ const Sidebar = () => {
                     </Collapse>
                 </div>
             </div>
-
         </div>
     )
 }

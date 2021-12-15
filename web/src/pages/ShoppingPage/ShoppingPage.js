@@ -45,7 +45,7 @@ const ShoppingPage = () => {
 
                 </div>
                 <div className={style.scrollArea}>
-                    <div className={style.page}>
+                    <div className={style.path}>
                         <Breadcrumbs aria-label="breadcrumb">
                             <Link underline="hover" color="inherit" href="/">
                                 MUI
@@ -292,7 +292,7 @@ const ShoppingPage = () => {
                                     <TwitterIcon></TwitterIcon>
                                 </span>
                                 <span className={style.pinterest}>
-                                    <PinterestIcon></PinterestIcon>
+                                    <PinterestIcon/>
                                 </span>
                             </div>
                         </div>

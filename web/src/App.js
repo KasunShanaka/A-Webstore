@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 //Pages
 import ShoppingPage from './pages/ShoppingPage/ShoppingPage';
+import ProductPage from './pages/ProductPage/ProductPage';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<ShoppingPage />} />
+          <Route exact path="/Product" element={<ProductPage />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
