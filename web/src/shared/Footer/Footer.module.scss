@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+
+.container {
+    .footer {
+        border-top: 1px solid $borderColor;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: space-around;
+        padding: 30px 10vw;
+        line-height: 2;
+
+        .customerService {
+            .footerHeader {
+                text-align: center;
+                font-size: 0.9rem;
+                font-weight: bold;
+                border-bottom: 4px solid red;
+                margin-bottom: 10px;
+            }
+        }
+
+        .visitOurStore {
+            .footerHeaderStore {
+                text-align: center;
+                font-size: 0.9rem;
+                font-weight: bold;
+                border-bottom: 4px solid rgb(238, 255, 0);
+                margin-bottom: 10px;
+            }
+
+            .storeInfo {
+                padding-left: 20px;
+            }
+        }
+
+        .connectWithUs {
+            .footerHeaderContact {
+                text-align: center;
+                font-size: 0.9rem;
+                font-weight: bold;
+                border-bottom: 4px solid rgb(32, 154, 224);
+                margin-bottom: 10px;
+            }
+
+            .socialMedia {
+                display: flex;
+                flex-direction: row;
+                gap: 7px;
+            }
+        }
+    }
+}
