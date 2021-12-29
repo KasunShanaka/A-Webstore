@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './ProductPage.module.scss';
+import { useState } from 'react';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,18 +18,59 @@ import Button from '@mui/material/Button';
 
 //icons
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
-import { stepClasses } from '@mui/material';
+import Footer from '../../shared/Footer/Footer';
+// import { stepClasses } from '@mui/material';
 
 const ProductPage = () => {
+
+
+    const [nav1, setNav1] = useState(null);
+    const [nav2, setNav2] = useState(null);
+
+
+    // useEffect(() => {
+    //     setNav1(this.slider1);
+    //     setNav2(this.slider2);
+    // })
+
+    // componentDidMount() {
+    //     this.setState({
+    //         nav1: this.slider1,
+    //         nav2: this.slider2
+    //     });
 
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 5,
         // slidesToScroll: 1,
         swipeToSlide: true,
-       
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 4,
+                    // slidesToScroll: 1,
+                    swipeToSlide: true,
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 3,
+                    // slidesToScroll: 1,
+                    swipeToSlide: true,
+                }
+            }
+        ]
+
     };
 
     return (
@@ -54,6 +96,54 @@ const ProductPage = () => {
                 </div>
                 <div className={style.productSection}>
                     <div className={style.productImages}>
+                        {/* <div> */}
+                        {/* <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
+                                <div className={style.primaryImage}>
+                                    <img src="https://m.media-amazon.com/images/I/712xIu7XCSL._AC_SX466_.jpg" alt="" />
+                                </div>
+                                <div>
+                                    <h3>2</h3>
+                                </div>
+                                <div>
+                                    <h3>3</h3>
+                                </div>
+                                <div>
+                                    <h3>4</h3>
+                                </div>
+                                <div>
+                                    <h3>5</h3>
+                                </div>
+                                <div>
+                                    <h3>6</h3>
+                                </div>
+                            </Slider>
+                            <Slider
+                                asNavFor={nav1}
+                                ref={(slider2) => setNav2(slider2)}
+                                slidesToShow={3}
+                                swipeToSlide={true}
+                                focusOnSelect={true}
+                            >
+                                <span className={style.image1}>
+                                    <img src="https://m.media-amazon.com/images/I/712xIu7XCSL._AC_SX466_.jpg" alt="" />
+                                </span>
+                                <span className={style.image1}>
+                                    <img src="https://m.media-amazon.com/images/I/712xIu7XCSL._AC_SX466_.jpg" alt="" />
+                                </span>
+                                <span className={style.image1}>
+                                    <img src="https://m.media-amazon.com/images/I/712xIu7XCSL._AC_SX466_.jpg" alt="" />
+                                </span>
+                                <div>
+                                    <h3>4</h3>
+                                </div>
+                                <div>
+                                    <h3>5</h3>
+                                </div>
+                                <div>
+                                    <h3>6</h3>
+                                </div>
+                            </Slider> */}
+                        {/* </div> */}
                         <div className={style.primaryImage}>
                             <img src="https://m.media-amazon.com/images/I/712xIu7XCSL._AC_SX466_.jpg" alt="" />
                         </div>
@@ -157,7 +247,7 @@ const ProductPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className={style.cardWrapper}>
                                 <div className={style.card}>
                                     <div className={style.cardImage}>
@@ -211,12 +301,25 @@ const ProductPage = () => {
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </Slider>
                     </div>
                 </div>
+                <div className={style.reviewsSection}>
+                    <div className={style.sectionTitle}>
+                        Customer Reviews
+                    </div>
+                    <div className={style.reviews}>
+                        No reviews yet be the first one to review.
+                    </div>
+                    <div className={style.writeReviewBtn}>
+                        <Button
+                            variant='contained'
+                        >
+                            Write a Review
+                        </Button>
+                    </div>
+                </div>
+                <Footer/>
             </div>
         </div>
     )

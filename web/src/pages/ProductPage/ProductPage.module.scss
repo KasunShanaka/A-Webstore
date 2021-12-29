@@ -11,8 +11,8 @@
 
         .productSection {
             height: 100%;
-            display: grid;
-            grid-template-columns: min-content auto;
+            display: flex;
+            // grid-template-columns: min-content auto;
 
             .productImages {
                 .primaryImage {
@@ -94,14 +94,13 @@
 
             .suggestHeader {
                 text-align: center;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 margin: 10px 0;
             }
             .carousel {
-                width: 80vw;
+                width: 800px;
 
                 .slider {
-                    
                     .cardWrapper {
                         .card {
                             margin: 10px;
@@ -121,7 +120,8 @@
                             }
 
                             .sProductName {
-                                font-size: 1.3rem;
+                                padding-top: 10px;
+                                font-size: 1rem;
                                 display: -webkit-box;
                                 -webkit-line-clamp: 2;
                                 -webkit-box-orient: vertical;
@@ -136,18 +136,118 @@
                             }
 
                             .sProductCategory {
+                                font-size: 0.8rem;
                                 color: $SecondaryFontColor;
                             }
 
                             .sProductPrice {
-                                font-size: 1.4em;
+                                // font-size: 1.2em;
                                 color: $AccentColor1;
                             }
                         }
                     }
                 }
             }
+            @media only screen and (max-width: 900px) {
+                .carousel {
+                    width: 600px;
+                }
+            }
+        }
+        .reviewsSection {
+            text-align: center;
+            padding-block: 60px;
 
+            .sectionTitle {
+                font-size: 1.3rem;
+            }
+            .reviews{
+                padding-block: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .productSection {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .productImages {
+                    display: grid;
+                    justify-content: center;
+
+                    .primaryImage {
+                        width: 400px;
+                        height: 300px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .secondaryImages {
+                        margin: 20px 0;
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+
+                        .image1 {
+                            width: 40px;
+
+                            img {
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+                .productInfo {
+                    width: 30vw;
+
+                    .specialNote {
+                        display: inline-block;
+                        font-size: 0.8rem;
+                        color: $SecondaryFontColor;
+                        border-bottom: 1px solid $borderColor;
+                    }
+                    .productName {
+                        font-size: 2rem;
+                    }
+                    .price {
+                        margin-top: 10px;
+                        font-size: 1.5rem;
+                        color: $AccentColor2;
+                        font-weight: bold;
+                    }
+                    .rating {
+                        margin: 20px 0;
+
+                        .reviewNote {
+                            font-size: 0.8rem;
+                        }
+                    }
+                    .ageGroup {
+                        margin-top: 10px;
+                    }
+                    .qty {
+                        margin-top: 20px;
+                        width: 50px;
+                    }
+                    .addToCart {
+                        margin: 10px 0;
+                    }
+                    .shareButtons {
+                        display: flex;
+                        align-items: center;
+
+                        .shareTxt {
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
