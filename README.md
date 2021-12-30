@@ -17,6 +17,8 @@ currently this is currently under construction. therefore the project is not ful
 
 (Also I only made this project public because of interviews 	:sweat_smile:)
 
+I am using fucitional components here and I havent used Redux to manage states yet, but I will use it for this project.
+
 ### Why I choosed the technologies/tools I used,
     React js - large community base and Its a library that I'm already familiar. 
     Material UI - plenty of components and easier to customize each one.
