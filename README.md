@@ -13,7 +13,7 @@
 # Project Description
 
 This is an Online shop that i am currently building for starting my own business.
-currently this is currently under construction. therefore the project is not fully completed at this point.
+This site is still under construction. Therefore the project is not fully completed at this point.
 
 (Also I only made this project public because of interviews 	:sweat_smile:)
 
